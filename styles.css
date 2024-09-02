@@ -52,7 +52,9 @@ body {
 }
 
 .cl-gray-blue { color: #334659; }
+.bg-gray-blue { background-color: #334659; }
 .cl-red { color: #cd3739; }
+.cl-red-btn { background-color: #cd3739; }
 .cl-white { color: #ffffff; }
 .cl-textos { color: #404040;}
 .cl-black { color: #000000; }
