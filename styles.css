@@ -1,0 +1,75 @@
+body {
+  background-image: url('./assets/FONDO.jpg');
+}
+
+@font-face {
+  font-family: 'Mundial';
+  src: url('./assets/Mundial_Fonts/Fontspring-DEMO-3-mundial-light-tty.otf') format('opentype');
+  font-style: light;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'Mundial';
+  src: url('./assets/Mundial_Fonts/Fontspring-DEMO-4-mundial-regular-tty.otf') format('opentype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mundial';
+  src: url('./assets/Mundial_Fonts/Fontspring-DEMO-5-mundial-demibold-tty.otf') format('opentype');
+  font-style: semibold;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Mundial';
+  src: url('./assets/Mundial_Fonts/Fontspring-DEMO-7-mundial-black-tty.otf') format('opentype');
+  font-style: black;
+  font-weight: 900;
+}
+
+.font-light { 
+  font-family: 'Mundial';
+  font-style: normal;
+  font-weight: 100;
+}
+.font-regular { 
+  font-family: 'Mundial';
+  font-style: normal;
+  font-weight: 400;
+}
+.font-semibold { 
+  font-family: 'Mundial';
+  font-style: normal;
+  font-weight: 600;
+}
+.font-black { 
+  font-family: 'Mundial';
+  font-style: normal;
+  font-weight: 900;
+}
+
+.cl-gray-blue { color: #334659; }
+.cl-red { color: #cd3739; }
+.cl-white { color: #ffffff; }
+.cl-textos { color: #404040;}
+.cl-black { color: #000000; }
+.cl-gray-strong { color: #233544; }
+.cl-gray { color: #586B7C; }
+
+
+.cl-gray-icon { color: #9e9e9e; }
+.cl-orange { color: #f77f00; }
+.cl-yellow { color: #fcbf49; }
+.cl-coffe { color: #eae2b7; }
+.cl-blue-sky { color: #00BDFF; }
+.cl-gray-light { color: #E0E0E0; }
+.cl-blue-gray { color: #2E465B; }
+
+#logo-login {
+  object-fit: cover;
+  object-position: center top;
+  width: 12rem;
+}
