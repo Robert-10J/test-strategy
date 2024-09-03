@@ -8,6 +8,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <?php include_once "./login.php"; ?>
+  <?php include_once "./agregar_usuario.php"; ?>
 </body>
 </html>
