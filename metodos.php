@@ -17,7 +17,17 @@ function obtenerUsuarioPorId($id)
 function obtenerUsuarios()
 {
     $bd = obtenerConexion();
-    $query = $bd->query("SELECT id, nombre, email, password, telefono, rol, salario, genero, created_at FROM usuarios");
+    $query = $bd->query("SELECT
+        usuarios.id,
+        usuarios.nombre,
+        usuarios.email,
+        usuarios.telefono,
+        roles.rol,
+        roles.color,
+        usuarios.salario,
+        usuarios.genero,
+        usuarios.created_at,
+        usuarios.updated_at FROM usuarios JOIN roles ON usuarios.id_rol = roles.id");
     return $query->fetchAll();
 }
 

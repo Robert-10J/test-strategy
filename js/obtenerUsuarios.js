@@ -14,6 +14,7 @@ async function getUsuarios() {
 
     for(const user of users) {
       const $fila = document.createElement('tr')
+      $fila.style.paddingTop = '5rem'
 
       const $celdaId = document.createElement('td')
       $celdaId.innerText = user.id
@@ -32,8 +33,12 @@ async function getUsuarios() {
       $fila.appendChild($celdaTelefono)
 
       const $celdaRol = document.createElement('td')
-      $celdaRol.classList.add('badge-cat-work')
-      $celdaRol.innerText = user.rol
+      
+      const $spanBadge = document.createElement('span')
+      $spanBadge.classList.add('badge')
+      $spanBadge.style.backgroundColor = user.color
+      $spanBadge.innerText = user.rol
+      $celdaRol.appendChild($spanBadge)
       $fila.appendChild($celdaRol)
 
       const $celdaFecha = document.createElement('td')
