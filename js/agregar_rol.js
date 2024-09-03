@@ -25,11 +25,12 @@ $btnAddRole.addEventListener('click', async function() {
     const inputOptions = new Promise((resolve) => {
       setTimeout(() => {
         resolve({
-          "#ff0000": "Rojo",
+          "#cd3739": "Rojo",
           "#00ff00": "Verde",
-          "#0000ff": "Azul",
+          "#00BDFF": "Azul",
           "#fcbf49": "Amarillo",
-          "#f77f00": "Naranja"
+          "#f77f00": "Naranja",
+          "#334659": "Gris"
         });
       }, 1000);
     });
@@ -60,7 +61,7 @@ function renderListCategories() {
 
     // Crear el span para mostrar el número de usuarios
     const span = document.createElement('span');
-    span.className = 'badge-cat-work';
+    span.className = 'badge';
     span.textContent = role.usuarios;
 
     // Aplicar el color del rol al fondo del span
