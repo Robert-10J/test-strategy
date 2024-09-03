@@ -45,6 +45,12 @@ function guardarUsuario($nombre, $precio, $descripcion)
     return $query->execute([$nombre, $precio, $descripcion]);
 }
 
+function obtenerRoles() {
+    $bd = obtenerConexion();
+    $query = $bd->query("SELECT id, rol FROM roles");
+    return $query->fetchAll();
+}
+
 function obtenerVariableDeEntorno($key)
 {
     if (defined("_ENV_CACHE")) {
