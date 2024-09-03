@@ -7,20 +7,18 @@
   <title>Users - ¡STRATEGY</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.1/dist/sweetalert2.all.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.13.1/dist/sweetalert2.min.css" rel="stylesheet">
 </head>
 
 <body>
   <!-- <?php /* include_once "./agregar_usuario.php";  */ ?> -->
 
   <div class="vh-100 bg-gray-blue">
-    <header class="row" style="height: 6rem; width: 100%;">
-      header
-    </header>
+    <?php include_once 'header.php'; ?>
 
     <main class="row h-100 bg-white">
-      <div class="col-lg-5 bg-gray-blue" style="width: 15rem;">
-        roles
-      </div>
+      <?php include_once 'aside.php'; ?>
 
       <div class="col w-100 p-0">
         <table class="table">
@@ -60,7 +58,4 @@
     </main>
   </div>
 
-
-</body>
-
-</html>
+</body></html>
