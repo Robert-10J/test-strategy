@@ -1,7 +1,7 @@
 <header class="row justify-content-evenly align-items-center px-5 gap-10" style="height: 7rem; width: 100%;">
   <div class="col d-flex gap-3 align-items-center">
     <a
-      href=""
+      href="/agregar_cliente.php"
       class="btn cl-red-btn px-3 cl-white">Agregar Nuevo Contacto</a>
     <div class="cl-white">
       Mostrar
