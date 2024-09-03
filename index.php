@@ -21,39 +21,7 @@
       <?php include_once 'aside.php'; ?>
 
       <div class="col w-100 p-0">
-        <table class="table">
-          <thead>
-            <tr class="cl-red-btn text-white">
-              <th scope="col">No</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Email</th>
-              <th scope="col">Teléfono</th>
-              <th scope="col">Rol</th>
-              <th scope="col">Fecha de unión</th>
-              <th scope="col">Salario</th>
-              <th scope="col">Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
-          </tbody>
-        </table>
+        <?php include_once 'tabla.php'; ?>
       </div>
     </main>
   </div>
