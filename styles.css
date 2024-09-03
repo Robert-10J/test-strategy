@@ -108,3 +108,7 @@ body {
 input[type=checkbox]:checked {
   accent-color: #2E465B;
 }
+
+table {
+  padding: -10;
+}
