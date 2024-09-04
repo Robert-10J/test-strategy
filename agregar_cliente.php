@@ -1,11 +1,15 @@
 <?php include_once "head.php"; ?>
 <div class="vh-100 d-flex justify-content-center align-items-center">
   <div class="w-75 h-auto shadow bg-white p-2">
-    <form action="" method="POST">
+    <div class="d-flex justify-content-start align-items-center gap-5">
+      <a href="/" class="btn btn-link" style="margin-right: 15rem;">Volver</a>
+      <p class="text-center fs-2">Registre un nuevo contacto</p>
+    </div>
+    <form action="" method="POST" class="needs-validation" novalidate>
       <div class="row">
 
         <div class="col w-50 h-100">
-          <div class="mb-3 w-100 input-group-lg">
+          <div class="mb-3 w-100 input-group-lg has-validation">
             <label
               for="nombre"
               class="form-label">Nombre</label>
@@ -69,7 +73,9 @@
           <div class="d-flex justify-content-end gap-2 border-form my-2">
             <button
               type="submit"
-              class="btn btn-rgt mt-2">Registrar</button>
+              class="btn btn-rgt mt-2"
+              id="submit"
+            >Registrar</button>
 
             <a
               href="/"

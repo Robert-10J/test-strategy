@@ -1,15 +1,28 @@
 <?php
-function actualizarUsuario($nombre, $precio, $descripcion, $id)
+function actualizarUsuario($nombre, $email, $telefono, $salario, $id_rol, $id)
 {
     $bd = obtenerConexion();
-    $query = $bd->prepare("UPDATE usuarios SET nombre = ?, precio = ?, descripcion = ? WHERE id = ?");
-    return $query->execute([$nombre, $precio, $descripcion, $id]);
+    $query = $bd->prepare("UPDATE usuarios SET nombre = ?, email = ?, telefono = ?, salario = ?, id_rol = ? WHERE id = ?");
+    return $query->execute([$nombre, $email, $telefono, $salario, $id_rol, $id]);
 }
 
 function obtenerUsuarioPorId($id)
 {
     $bd = obtenerConexion();
-    $query = $bd->prepare("SELECT id, nombre, descripcion, precio FROM usuarios WHERE id = ?");
+    $query = $bd->prepare("SELECT
+            contactos.id AS contacto_id,
+            contactos.nombre,
+            contactos.email,
+            contactos.telefono,
+            contactos.salario,
+            roles.rol,
+            roles.id AS rol_id,
+            contactos.created_at
+        FROM 
+            contactos
+        JOIN 
+            roles ON contactos.id_rol = roles.id
+        WHERE contactos.id = ?;");
     $query->execute([$id]);
     return $query->fetchObject();
 }
@@ -18,16 +31,14 @@ function obtenerUsuarios()
 {
     $bd = obtenerConexion();
     $query = $bd->query("SELECT
-        usuarios.id,
-        usuarios.nombre,
-        usuarios.email,
-        usuarios.telefono,
+        contactos.id,
+        contactos.nombre,
+        contactos.email,
+        contactos.telefono,
+        contactos.salario,
         roles.rol,
         roles.color,
-        usuarios.salario,
-        usuarios.genero,
-        usuarios.created_at,
-        usuarios.updated_at FROM usuarios JOIN roles ON usuarios.id_rol = roles.id");
+        contactos.created_at FROM contactos JOIN roles ON contactos.id_rol = roles.id ORDER BY contactos.id");
     return $query->fetchAll();
 }
 
@@ -38,11 +49,11 @@ function eliminarUsuario($id)
     return $query->execute([$id]);
 }
 
-function guardarUsuario($nombre, $precio, $descripcion)
+function guardarContacto($nombre, $email, $telefono, $salario, $id_rol)
 {
     $bd = obtenerConexion();
-    $query = $bd->prepare("INSERT INTO usuarios(nombre, precio, descripcion) VALUES(?, ?, ?)");
-    return $query->execute([$nombre, $precio, $descripcion]);
+    $query = $bd->prepare("INSERT INTO contactos (nombre, email, telefono, salario, id_rol) VALUES(?, ?, ?, ?, ?)");
+    return $query->execute([$nombre, $email, $telefono, $salario, $id_rol]);
 }
 
 function obtenerRoles() {
