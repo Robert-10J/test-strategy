@@ -2,7 +2,7 @@
 function actualizarUsuario($nombre, $email, $telefono, $salario, $id_rol, $id)
 {
     $bd = obtenerConexion();
-    $query = $bd->prepare("UPDATE usuarios SET nombre = ?, email = ?, telefono = ?, salario = ?, id_rol = ? WHERE id = ?");
+    $query = $bd->prepare("UPDATE contactos SET nombre = ?, email = ?, telefono = ?, salario = ?, id_rol = ? WHERE id = ?");
     return $query->execute([$nombre, $email, $telefono, $salario, $id_rol, $id]);
 }
 
